@@ -1,0 +1,26 @@
+server:
+  port: 7080
+ 
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  devtools:  
+        restart: 
+            enabled : true    
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        stat: debug
+
+

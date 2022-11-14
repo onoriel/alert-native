@@ -1,0 +1,29 @@
+server:
+  port: 7080
+ 
+spring:
+  jpa:
+    show-sql: true
+     
+  datasource:
+    plain-url: localhost:49161/xe
+    url: jdbc:oracle:thin:@${spring.datasource.plain-url}
+    userName: system
+    password: oracle 
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  devtools:  
+        restart: 
+            enabled : true    
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        stat: debug
+
+
